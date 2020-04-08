@@ -24,10 +24,10 @@ const styles = theme => ({
     submit: {
       marginTop: theme.spacing.unit * 3,
     },
-    noAccountHeader: {
+    hasAccountHeader: {
       width: '100%'
     },
-    signUpLink: {
+    logInLink: {
       width: '100%',
       textDecoration: 'none',
       color: '#303f9f',

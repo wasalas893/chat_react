@@ -2,6 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
+import {Route,BrowserRouter as Router, Switch} from 'react-router-dom';
+import LoginComponent from './login/login';
+import SignupComponent from './signup/signup';
+import DashboardComponent from './dashboard/dashboard';
+import NavBar from './Header/Navbar';
+import Landing from './Header/Landing';
+
 
 const firebase=require("firebase");
 require("firebase/firestore");
@@ -17,8 +24,24 @@ firebase.initializeApp({
     measurementId: "G-TDT35ZQZZ6"
 });
 
+const routing=(
+    
+  <Router>
+     <NavBar/>
+     <Route exact path='/' component={Landing} />
+    <div id="routing-container">
+      <Switch>
+      <Route path='/dashboard' component={DashboardComponent}></Route>
+      <Route path='/login' component={LoginComponent}></Route>
+      <Route path='/signup' component={SignupComponent}></Route>
+     
+      </Switch>
+    </div>
+  </Router>
+);
+
 ReactDOM.render(
-  <div>hello world</div>,
+ routing,
   document.getElementById('root')
 );
 
