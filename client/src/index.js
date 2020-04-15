@@ -29,13 +29,12 @@ const routing=(
   <Router>
      <NavBar/>
      <Route exact path='/' component={Landing} />
-    <div id="routing-container">
-      <Switch>
+     <div id="routing-container">
+     
       <Route path='/dashboard' component={DashboardComponent}></Route>
       <Route path='/login' component={LoginComponent}></Route>
       <Route path='/signup' component={SignupComponent}></Route>
      
-      </Switch>
     </div>
   </Router>
 );

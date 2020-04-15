@@ -70,7 +70,8 @@ class DashboardComponent extends React.Component {
     }
     submitMessage=(msg)=>{
         
-        const docKey=this.buildDocKey(this.state.chats[this.state.selectedChat].users.filter(_usr=>_usr!==this.state.email)[0]);
+        const docKey=this.buildDocKey(this.state.chats[this.state.selectedChat]
+            .users.filter(_usr=>_usr!==this.state.email)[0]);
         firebase
            .firestore()
            .collection('chats')
@@ -130,7 +131,8 @@ class DashboardComponent extends React.Component {
            this.selectChat(this.state.chats.length - 1);
      }
 
-     clickedChatWhereNotSender =(chatIndex)=>this.state.chats[chatIndex].messages[this.state.chats[chatIndex].messages.length - 1].sender!==this.state.email;
+     clickedChatWhereNotSender =(chatIndex)=>this.state.chats[chatIndex]
+     .messages[this.state.chats[chatIndex].messages.length - 1].sender!==this.state.email;
 
     componentDidMount = () =>{
         firebase.auth().onAuthStateChanged(async _usr => {
