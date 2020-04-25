@@ -343,6 +343,14 @@ button {
   margin-top: 90px;
  
 }
+ @media only screen and (max-width: 70px) {
+  .landing{
+    margin: 0 10%;
+  }
+  .image {
+    width: 100%;
+  }
+ }
 
 .landing-inner {
   color: rgb(8, 8, 8);

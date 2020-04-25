@@ -5,6 +5,7 @@ import ChatViewComponent from '../ChatView/chatView';
 import ChatTextBoxComponent from '../ChatTextBox/chatTextBox';
 import styles from './styles';
 import { Button, withStyles } from '@material-ui/core';
+import { MobileStepper } from '@material-ui/core';
 const firebase = require("firebase");
 
 
@@ -26,16 +27,14 @@ class DashboardComponent extends React.Component {
         return(
           
            
-            <div>
-           
-                
-              
+         <div className={classes.container}>
                 <ChatListComponent history={this.props.history}  
                 newChatBtnFn={this.newChatBtnClicked}
                 selectChatFn={this.selectChat}
                 chats={this.state.chats}
                 userEmail={this.state.email}
                 selectedChatIndex={this.state.selectedChat}>
+
                 </ChatListComponent>
               
                   {
@@ -60,6 +59,7 @@ class DashboardComponent extends React.Component {
                 <Button className={classes.signOutBtn} onClick={this.signOut}>Sign Out</Button>
 
             </div>
+            
         );
     }
      signOut = () => firebase.auth().signOut();
