@@ -86,7 +86,7 @@ class NewChatComponent extends React.Component {
       chatExists ? this.goToChat() : this.createChat();
     }
   }
-
+//create the dockey
   buildDocKey = () => [firebase.auth().currentUser.email, this.state.username].sort().join(':');
 
   createChat = () => {
