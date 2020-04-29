@@ -8,7 +8,7 @@ import './Navbar.css';
       
         <nav className="navbar bg-dark">
       <h1>
-        <Link to='/'>Chat App</Link>
+        <Link to='#'>Chat App</Link>
       </h1>
       <ul>
         
