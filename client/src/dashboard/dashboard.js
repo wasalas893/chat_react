@@ -69,7 +69,7 @@ class DashboardComponent extends React.Component {
       this.messageRead();
     }
     submitMessage=(msg)=>{
-        
+        //chat view
         const docKey=this.buildDocKey(this.state.chats[this.state.selectedChat]
             .users.filter(_usr=>_usr!==this.state.email)[0]);
         firebase
