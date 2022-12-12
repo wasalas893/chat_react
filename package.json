@@ -22,7 +22,7 @@
   "homepage": "https://github.com/wasalas893/im-tutorial#readme",
   "dependencies": {
     "config": "^3.3.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-validator": "^6.4.0"
   },
   "devDependencies": {
